@@ -1,9 +1,11 @@
 FROM node:slim
 
+WORKDIR /app
+
 COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-CMD [ "node", "/src/index.js" ]
+CMD [ "node", "/app/src/index.js" ]
